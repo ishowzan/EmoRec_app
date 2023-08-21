@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>感情認識</title>
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<body>
+    <header>   
+        <img class="header_img" src="https://aidemyexstorage.blob.core.windows.net/aidemycontents/1621500180546399.png" alt="Aidemy">
+        <a class="header-logo" href="#">感情認識</a>
+    </header>
+
+    <div class="main">    
+        <h2>AIが送信された画像から感情を認識します</h2>
+        <p>画像を送信してください</p>
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="submit!" type="submit">
+        </form>
+
+        {% if answer %}
+        <div class="results">
+            <div>
+                <h3>入力画像:</h3>
+                <img src="/uploads/{{ input_image }}" alt="Input Image">
+            </div>
+            
+            <div>
+                <h3>48x48モノクロ:</h3>
+                <img class="processed" src="/uploads/{{ processed_image }}" alt="Processed Image">
+            </div>
+            
+            <div class="answer">
+                <h3>予測結果:</h3>
+                <p>{{ answer }}</p>
+            </div>
+
+            <!-- 追加するセクション -->
+            <div class="probabilities">
+                <h3>各クラスの予測確率:</h3>
+                <div class="prob-list">
+                    {% for class_name, probability in class_probabilities %}
+                        <p>{{ class_name }}: {{ probability }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <img class="footer_img" src="https://aidemyexstorage.blob.core.windows.net/aidemycontents/1621500180546399.png" alt="Aidemy">
+        <small>&copy; 2019 Aidemy, inc.</small>   
+    </footer>
+</body>
+</html>

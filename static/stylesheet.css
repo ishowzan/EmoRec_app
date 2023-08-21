@@ -1,0 +1,111 @@
+header {
+    background-color: #76B55B;
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.header-logo {
+    color: #fff;
+    font-size: 25px;
+    margin: 15px 25px;
+}
+
+.header_img {
+    height: 25px;
+    margin: 15px 25px;
+}
+
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #444444;
+    margin: 90px 0px;
+    text-align: center;
+}
+
+/* 見出しのスタイルを変更してサイズを小さくします */
+.results h3 {
+    font-size: 16px; /* これは例です。適切なサイズに調整してください */
+    margin-bottom: 10px; /* 適切な余白を持たせるための値。調整してください */
+}
+
+
+p {
+    color: #444444;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+}
+
+.answer {
+    color: #444444;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between; /* こちらを変更 */
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 20px;
+    max-width: 1200px;  /* これを追加 */
+    margin-left: auto;  /* 中央寄せのために追加 */
+    margin-right: auto; /* 中央寄せのために追加 */
+}
+
+.results > div {
+    text-align: center;
+    max-width: 300px;
+}
+
+
+.results img {
+    max-width: 100%; /* 画像の最大幅を親要素に合わせる */
+    height: auto;
+}
+
+.results img.processed {
+    width: 48px; /* 48x48のモノクロ画像を48pixelx48pixelにする */
+    height: 48px;
+}
+
+.probabilities .prob-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* テキストを中央に寄せます */
+}
+
+.probabilities .prob-list p {
+    margin: 5px 0;  /* 上下のマージンを調整して、適切な間隔を保ちます */
+}
+
+footer {
+    background-color: #F7F7F7;
+    height: 110px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.footer_img {
+    height: 25px;
+    margin: 15px 25px;
+}
+
+small {
+    margin: 15px 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
